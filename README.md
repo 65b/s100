@@ -2,13 +2,13 @@ S100 Security/Forensic/Recovery Live CD environment
 
                                                                           
                                                                           
-      ############   #####    ############  ############                  
-      #..........#@  #...#@   #..........#@ #..........#@                 
-      #"##########@  #"""#@   #""######""#@ #""######""#@                 
-      #"#@@@@@@@@@@  #;;;#@   #;;#    #;;#@ #;;#    #;;#@                 
-      #;#@           #;;;#@   #;;#    #;;#@ #;;#    #;;#@                 
-      #;#@           #;;;#@   #;;#    #;;#@ #;;#    #;;#@                 
-      #;##########   #;;;#@   #;;#    #;;#@ #;;#    #;;#@                 
+       ############   ####     ###########   ###########                  
+      #...........#@ #...#@   #..........#@ #..........#@                 
+      #""##########@ #"""#@   #""######""#@ #""######""#@                 
+      #""#@@@@@@@@@@ #;;;#@   #;;#    #;;#@ #;;#    #;;#@                 
+      #;;#@          #;;;#@   #;;#    #;;#@ #;;#    #;;#@                 
+      #;;#@          #;;;#@   #;;#    #;;#@ #;;#    #;;#@                 
+      #;;##########  #;;;#@   #;;#    #;;#@ #;;#    #;;#@                 
       #==========#@  #===#@   #==#    #==#@ #==#    #==#@                 
       #########==#@  #===#@   #==#    #==#@ #==#    #==#@                 
               #==#@  #===#@   #==#    #==#@ #==#    #==#@                 
@@ -17,7 +17,7 @@ S100 Security/Forensic/Recovery Live CD environment
       #########==#@  #%%%#@   #%%#    #%%#@ #%%#    #%%#@                 
       #%%%%%%%%%%#@  #%%%#@   #%%#    #%%#@ #%%#    #%%#@                 
       #&&&&&&&&&&#@  #&&&#@   #&&#    #&&#@ #&&#    #&&#@                 
-      ############@  #####@   ############@ ############@                 
+      #XXXXXXXXXX#@  #XXX#@   #XXXXXXXXXX#@ #XXXXXXXXXX#@                 
       ############@  #####@   ############@ ############@                 
        @@@@@@@@@@@@   @@@@@    @@@@@@@@@@@@  @@@@@@@@@@@@                 
                                                                           
@@ -38,6 +38,59 @@ to suit one purpose at the expense of others. It aims to
 be a usb multitool for any technical task which could
 benefit from a non-persistent, portable environment with
 a wide variety of common and uncommon tools
+
+What is included?
+---------------------------------------------------------
+Xfce4 desktop environment with custom theme
+Chromium browser configured for privacy
+AbiWord and Gnumeric for office docs
+Network-Manager and nm-applet for the lazy
+Gedit for text editing via gui
+Filelight for file system visualization
+DosBox for old dos stuff
+QEMU for hardware emulation
+GIMP graphics editor
+PDF viewer
+Skype
+Adobe Flash
+OpenJDK and web plugin
+TOR only mode (via anonymize script)
+Unbound local DNS resolver with DNSSEC configured
+MAC randomization at every boot
+Kismet wireless monitor (latest)
+Aircrack-NG wifi pen testing tools (latest)
+w3af web app pen testing tools (latest)
+metasploit from git
+armitage
+postgresql
+arp-scan and arpwatch
+netcat
+nmap
+ncrack
+thc-hydra
+powertop
+ntop
+Wireshark
+PDF viewers (epdfview and evince)
+RDP/VNC client (remmina)
+Audio analysis tools (baudline, jackd, audacity)
+VLC media player
+WINE
+Gparted
+Transmission bittorrent client
+Linphone VOIP client
+Pidgin chat client
+binwalk
+hexedit
+guymager
+dcfldd
+u3-tool
+pv
+nano
+vim
+minetest minecraft clone from git
+*and there's MORE!*
+
 
 What is the base distribution for S100?
 ---------------------------------------------------------
@@ -87,17 +140,22 @@ All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
+
 1. Redistributions of source code must retain the above copyright
    notice, this list of conditions and the following disclaimer.
+
 2. Redistributions in binary form must reproduce the above copyright
    notice, this list of conditions and the following disclaimer in the
    documentation and/or other materials provided with the distribution.
+
 3. All advertising materials mentioning features or use of this software
    must display the following acknowledgement:
    This product includes software developed by the S100 team.
+
 4. Neither the name of the s100 team nor the
    names of its contributors may be used to endorse or promote products
    derived from this software without specific prior written permission.
+
 
 THIS SOFTWARE IS PROVIDED BY ITS DEVELOPERS ("S100 TEAM") ''AS IS'' AND ANY
 EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
