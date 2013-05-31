@@ -1,0 +1,427 @@
+# /usr/share/live/build/lists/xfce - package list for live-build(7)
+
+#postgres for armitage
+libxslt-dev
+libxml2-dev
+postgresql
+postgresql-client
+libpq-dev
+libpgsql-ruby
+linphone
+cifs-utils
+# m0ar hax
+w3af
+nikto
+hydra
+
+#office stuff
+gnumeric
+abiword
+
+#depends for w3af (also a hook)
+python-dev
+python-lxml
+python2.6-dev
+python-setuptools
+
+#fuse for sshfs, ntfs
+fuse
+
+#emulation front ends
+qemu
+dosbox
+
+#nice editor
+ne
+
+#compilation requirements (minetest originally)
+cmake
+libxxf86vm-dev
+libpng-dev
+libbz2-dev
+libjpeg-dev
+libgl1-mesa-dev
+libX11-dev
+libvorbis-dev
+libirrlicht-dev
+libopenal-dev
+
+#uberproxy
+tor
+
+#audio
+lame
+
+#power
+powertop
+
+#debian
+checkinstall
+
+#more depends
+libsqlite3-dev
+libpcap-dev
+libssl-dev
+
+#power
+acpid
+
+#audio
+audacious
+
+#general
+gnome-themes-standard
+xterm
+jamin
+jack-rack
+chromium-browser
+pan
+abiword
+epdfview
+filelight
+pidgin
+subversion
+transmission
+irb rdoc libyaml-ruby libzlib-ruby libopenssl-ruby libdl-ruby libreadline-ruby libiconv-ruby rubygems sqlite3 libsqlite3-ruby libsqlite3-dev ruby-dev
+ruby
+libruby
+irb
+rdoc
+iw
+openjdk-6-jre
+openjdk-6-jdk
+icedtea6-plugin
+libyaml-ruby
+libzlib-ruby
+libopenssl-ruby
+libdl-ruby
+libreadline-ruby
+libiconv-ruby
+rubygems
+sqlite3
+libsqlite3-ruby
+libsqlite3-dev
+xfce4
+xfonts-terminus
+audacity
+acpi
+xfce4-cpugraph-plugin
+xfce4-terminal
+mpg123
+mesa-utils
+network-manager-gnome
+gimp
+desktop-base
+pv
+unbound
+arp-scan
+wireshark
+vlc
+flashplugin-nonfree
+disktype
+gparted
+hexedit
+wine
+gedit
+nano
+screen
+minicom
+pkg-config
+libnl-dev
+libncurses-dev
+ettercap-text-only
+remmina
+u3-tool
+
+#xserver
+xserver-xorg-video-intel
+xserver-xorg-video-ati
+xserver-xorg-video-nouveau
+xserver-xorg-input-evdev
+xserver-xorg-input-synaptics
+gsynaptics
+
+#include <standard>
+
+# Debian Forensics
+gddrescue
+#include <debian-forensics>
+
+# Other forensic packages
+scalpel
+
+# Bootloaders
+syslinux-common
+grub lilo mbr syslinux extlinux
+
+# System
+gnupg dash discover gawk htop less lsof ltrace psmisc screen strace units
+pstack
+tcsh
+vlock
+mailutils
+moreutils
+
+# Editors
+aview mc mg vim wdiff hexedit nvi tweak
+
+# Harddisk
+dvd+rw-tools genisoimage sdparm hdparm blktool parted partimage secure-delete scsitools smartmontools testdisk wodim wipe hddtemp bonnie++
+par2 dvd+rw-tools
+fsarchiver
+
+# for /usr/bin/summer:
+chiark-utils-bin
+
+# System
+dmidecode mcelog cpuburn
+lshw pciutils procinfo usbutils
+ stress
+
+read-edid
+
+# Browser
+lynx links2 w3m
+elinks
+
+# Compression
+arj bzip2 lzma p7zip-full unace unrar-free unzip zip lzop ncompress
+unace pax
+
+rar unrar
+#sl-modem-daemon
+atmel-firmware linux-wlan-ng-firmware firmware-ralink bluez-firmware
+libertas-firmware firmware-iwlwifi zd1211-firmware
+firmware-qlogic firmware-bnx2
+
+# These two are from contrib but the idea is the same: non-free firmware.
+b43-fwcutter
+
+# Backup
+dar gddrescue dump
+mt-st
+dar duplicity
+
+# File comparison
+rdiff rdiff-backup rsnapshot
+colordiff
+
+# General
+chrootuid
+cpio
+cryptcat
+directvnc
+etherwake
+ftp
+ifenslave-2.6
+ifrename
+ethtool
+ipcalc
+mii-diag
+minicom
+gkermit
+netcat
+netcat6
+netmask
+openssl
+openvpn
+vpnc
+#strongswan
+sipcalc
+socat
+ssh
+telnet-ssl
+whois
+irssi
+debootstrap
+cdebootstrap
+rinse
+pv
+manpages
+
+acl
+symlinks
+
+bsdmainutils
+
+# Firewalling
+fail2ban
+iptables
+vlan
+
+# Essential networking
+netbase
+rdate
+ntpdate
+dhcp3-client
+ppp
+pppconfig
+pppoe
+pppoeconf
+atm-tools
+#ipppd
+
+# Bridging
+bridge-utils
+ebtables
+parprouted
+
+# Special hardware
+br2684ctl
+
+# Routing
+cutter
+iproute
+iproute-doc
+iputils-tracepath
+mtr-tiny
+tcptraceroute
+traceroute
+spinner
+
+# Monitoring
+arpwatch
+atsar
+bmon
+ethstatus
+geoip-bin
+hp-search-mac
+icmpinfo
+iftop
+ipgrab
+iptstate
+iptraf
+lft
+nast
+nbtscan
+netdiscover
+nload
+nsca
+nstreams
+ntop
+saidar
+scanssh
+sntop
+ssldump
+tcpdump
+tcpreen
+tcpreplay
+tshark
+
+# Testing
+crashme
+dbench
+doscan
+dsniff
+hping3
+icmpush
+macchanger
+medusa
+netdiag
+netpipe-tcp
+nmap
+ndisc6
+ngrep
+p0f
+packit
+python-scapy
+xprobe
+
+# Log Analysers
+fwanalog
+fwlogwatch
+lwatch
+multitail
+
+# Net Analysers
+httping
+arping
+dnstracer
+netselect
+dnsutils
+adns-tools
+fping
+
+# FS tools
+reiserfsprogs
+squashfs-tools
+sshfs
+sysfsutils
+#udftools
+xfsdump
+xfsprogs
+btrfs-tools
+#cryptsetup
+#dmraid
+e2fsprogs
+hfsplus
+hfsutils
+jfsutils
+lsscsi
+lvm2
+#mdadm
+mtools
+nilfs-tools
+ntfs-3g
+reiser4progs
+dmsetup
+
+# Forensics
+foremost
+magicrescue
+sleuthkit
+autopsy
+
+# Tools for managing M$ and its ilk
+dosfstools mscompress chntpw pptpd pptp-linux
+
+# unsorted
+cpuid x86info
+hwinfo
+tofrodos
+hal
+dc
+bc
+rlwrap
+chkrootkit
+
+rkhunter
+#clamav
+#clamav-data
+smbclient
+nfs-common
+wireless-tools
+wpasupplicant
+
+#aide
+#tripwire
+sleuthkit
+autopsy
+pwgen
+
+rsync
+ncftp
+rpm
+curl
+wget
+lftp
+net-tools
+
+expect
+gpm
+
+# Network servers:
+hostap-utils
+hostapd
+
+# Flab
+emacs23-nox
+build-essential gdb gfortran gnat
+
+bin86
+# /usr/share/live/build/package-lists/xfce - package list for live-build(7)
+
+#include <standard-x11>
+
+xfce4
+desktop-base
