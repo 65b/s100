@@ -1,0 +1,2 @@
+CREATE USER msf WITH PASSWORD 'notthepassword';
+CREATE DATABASE msf OWNER msf;

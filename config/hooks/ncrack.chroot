@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Download and install ncrack
+mkdir -p /opt
+cd /opt
+wget -O ncrack.tar.gz http://nmap.org/ncrack/dist/ncrack-0.4ALPHA.tar.gz
+tar xvzf ncrack.tar.gz
+cd /opt/ncrack-0.4ALPHA
+./configure
+make
+make install
+cd /opt
+rm -rf /opt/ncrack-0.4ALPHA
+rm -rf /opt/ncrack.tar.gz

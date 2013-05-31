@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Download and install kismet
+mkdir -p /opt
+cd /opt
+git clone https://www.kismetwireless.net/kismet.git
+cd kismet
+
+./configure
+make dep
+make -j2
+make install
+
+cd ..
+rm -rf kismet
+
+

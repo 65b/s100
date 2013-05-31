@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Baudline
+Comment=Baudline Analyzer
+Exec=/opt/baudline/baudline
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Icon=xterm-color_48x48
+Categories=Sound;Multimedia;Audio;
+

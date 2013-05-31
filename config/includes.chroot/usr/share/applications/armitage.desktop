@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Metasploit Armitage GUI
+Comment=Metasploit Armitage GUI
+Exec=armitage_wrapper
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Icon=xterm-color_48x48
+Categories=Network;Security;

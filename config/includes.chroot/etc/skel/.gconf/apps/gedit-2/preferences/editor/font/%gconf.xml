@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="editor_font" mtime="1337444583" type="string">
+		<stringvalue>Terminus 10</stringvalue>
+	</entry>
+	<entry name="use_default_font" mtime="1337444574" type="bool" value="false"/>
+</gconf>

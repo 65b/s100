@@ -1,0 +1,27 @@
+#!/bin/bash
+
+NICS=$(/sbin/ifconfig -a | /usr/bin/awk '/Link encap:Ethernet/{print $1}
+')
+
+ for NIC in ${NICS}
+        do
+                ifconfig ${NIC} down
+                /usr/bin/macchanger -r ${NIC} 
+                /bin/sleep 1
+        done
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    echo "Starting script randmac "
+    ;;
+  stop)
+    echo "Stopping script randmac"
+    ;;
+  *)
+    echo "Usage: /etc/init.d/randmac {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0

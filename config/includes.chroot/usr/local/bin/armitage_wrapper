@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo sh -c 'cd /opt/metasploit && export MSF_DATABASE_CONFIG=/home/user/.msf.yml && export PATH=$PATH:/opt/metasploit && /opt/metasploit/armitage'
+

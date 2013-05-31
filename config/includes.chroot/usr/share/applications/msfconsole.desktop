@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Metasploit console
+Comment=Metasploit console
+Exec=/opt/metasploit/msfconsole
+Terminal=true
+Type=Application
+Encoding=UTF-8
+Icon=xterm-color_48x48
+Categories=Network;Security;

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Kismet
+Comment=Kismet
+Exec=kismet
+Terminal=true
+Type=Application
+Encoding=UTF-8
+Icon=xterm-color_48x48
+Categories=Network;Security;

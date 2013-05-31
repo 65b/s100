@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Anonymize
+Comment=TOR network
+Exec=sudo /usr/local/sbin/anonymize
+Terminal=true
+Type=Application
+Encoding=UTF-8
+Icon=xterm-color_48x48
+Categories=System;Network;Utilities;
+

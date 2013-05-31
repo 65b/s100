@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Download and install metasploit
+mkdir -p /opt
+cd /opt
+wget http://reaver-wps.googlecode.com/files/reaver-1.4.tar.gz
+tar xvzf reaver-1.4.tar.gz
+cd /opt/reaver-1.4/src
+./configure
+make
+make install
+cd /opt
+rm -rf /opt/reaver-1.4.tar.gz
+rm -rf /opt/reaver-1.4
+

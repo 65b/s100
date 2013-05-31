@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Baudline JACK version
+Comment=Baudline Analyzer 
+Exec=/opt/baudline/baudline_jack
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Icon=xterm-color_48x48
+Categories=Sound;Multimedia;Audio;
+

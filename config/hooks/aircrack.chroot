@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Download and install metasploit
+mkdir -p /opt
+cd /opt
+wget http://download.aircrack-ng.org/aircrack-ng-1.1.tar.gz
+tar xvzf aircrack-ng-1.1.tar.gz
+cd /opt/aircrack-ng-1.1
+sed -ie 's/-Werror //g' common.mak
+sed -ie 's/-O3 /-Os/g' common.mak
+make
+make install
+cd /opt
+rm -rf aircrack-ng-1.1.tar.gz
+rm -rf aircrack-ng-1.1
+

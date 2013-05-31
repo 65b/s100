@@ -1,0 +1,116 @@
+#!/bin/sh
+
+## live-config(7) - System Configuration Scripts
+## Copyright (C) 2006-2012 Daniel Baumann <daniel@debian.org>
+##
+## live-config comes with ABSOLUTELY NO WARRANTY; for details see COPYING.
+## This is free software, and you are welcome to redistribute it
+## under certain conditions; see COPYING for details.
+
+
+s100 ()
+{
+
+	echo -n " s100"
+	mkdir -p /opt/s100
+
+	PATH=/usr/sbin:/usr/bin:/sbin:/bin
+	NICS=$(/sbin/ifconfig -a | /usr/bin/awk '/Link encap:Ethernet/{print $1}')
+	s100_fixes
+}
+
+s100_fixes ()
+{
+	echo -n " s100-fixes"
+	ln -s / /filesystem.squashfs
+	echo "fixes done" >> /opt/s100/debug
+	sed -ie 's/gimp.desktop;gimp.desktop;evince.desktop;//g' /usr/share/applications/mimeinfo.cache
+	s100_network
+}
+
+s100_network ()
+{
+	echo -n " s100-network"
+	for NIC in ${NICS}
+	do
+		ifconfig ${NIC} down
+        	/usr/bin/macchanger -r ${NIC} 
+        	/bin/sleep 1
+	done
+
+	echo "VisualHostKey yes" >> /etc/ssh/ssh_config
+
+	echo "network done" >> /opt/s100/debug
+
+	s100_firewall
+}
+
+s100_firewall ()
+{
+	echo -n " s100-fw"
+	iptables -P FORWARD DROP
+	iptables -P INPUT DROP
+	iptables -P OUTPUT ACCEPT
+	iptables -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+	iptables -A INPUT -i lo -j ACCEPT
+	iptables -A INPUT -m conntrack --ctstate INVALID -j DROP
+	
+	echo "firewall done" >> /opt/s100/debug
+
+	s100_sound
+}
+
+s100_power ()
+{
+	echo -n " s100-power"
+
+	# Bus list for runtime pm. Probably shouldn't touch this.
+	buslist="pci spi i2c"
+       # Enable laptop mode
+	echo 5 > /proc/sys/vm/laptop_mode
+       # Less VM disk activity. Suggested by powertop
+        echo 1500 > /proc/sys/vm/dirty_writeback_centisecs
+    
+       # SATA power saving
+        for i in /sys/class/scsi_host/host*/link_power_management_policy; do
+            echo min_power > $i
+        done
+	
+	echo "power done" >> /opt/s100/debug
+
+	s100_sound
+}
+
+s100_sound ()
+{
+	echo -n "s100-sound"
+
+	modprobe snd-pcm-oss
+	
+	echo "sound done" >> /opt/s100/debug
+	s100_polkit
+}
+
+s100_polkit ()
+{
+	echo -n "s100-polkit"
+	mkdir -p /var/lib/polkit-1/localauthority/10-vendor.d/
+	mkdir -p /etc/polkit-1/localauthority/10-vendor.d/
+	cp /opt/s100/11-override.pkla /var/lib/polkit-1/localauthority/10-vendor.d/
+	cp /opt/s100/11-override.pkla /etc/polkit-1/localauthority/10-vendor.d/
+	#failsafes
+	sed -ie 's/=no/=yes/g' /lib/live/config/1100-policykit 
+	sed -ie 's/=no/=yes/g' /var/lib/polkit-1/localauthority/10-vendor.d/10-live-cd.pkla
+	adduser user fuse
+	adduser user operator
+	adduser user video
+	adduser user audio
+
+}
+
+#dpkg-reconfigure tzdata
+s100
+#echo -n " synaptics-hack"
+#synclient VertEdgeScroll=1
+#synclient VertTwoFingerScroll=0
+

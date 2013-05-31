@@ -1,0 +1,7 @@
+# Policy to allow the livecd user to bypass policykit
+[Polkit override]
+Identity=unix-user:user
+Action=*
+ResultAny=yes
+ResultInactive=yes
+ResultActive=yes

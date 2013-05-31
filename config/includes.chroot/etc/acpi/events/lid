@@ -1,0 +1,4 @@
+event=button/lid
+action=/etc/acpi/sleep.sh %e
+
+

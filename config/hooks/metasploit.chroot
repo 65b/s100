@@ -1,0 +1,72 @@
+#!/bin/sh
+
+# Download and install metasploit
+mkdir -p /opt
+cd /opt
+echo "##########################################################"
+echo "Downloading latest version of MSF from git..."
+echo "##########################################################"
+
+git clone https://github.com/rapid7/metasploit-framework.git
+mv metasploit-framework metasploit
+cd metasploit
+echo "##########################################################"
+echo "Installing dependencies and setting DB password..."
+echo "##########################################################"
+gem install msgpack
+
+# Setup postgres for armitage
+pw=`date | sha256sum | head -c 64`
+sed -ie "s/notthepassword/$pw/g" /opt/s100/metasploit.sql
+sed -ie "s/notthepassword/$pw/g" /etc/skel/.msf.yml
+echo "##########################################################"
+echo "Preparing PostgreSQL for MSF..."
+echo "##########################################################"
+/etc/init.d/postgresql start
+sudo -u postgres psql < /opt/s100/metasploit.sql
+/etc/init.d/postgresql stop
+echo "##########################################################"
+echo "Adding exteral packages..."
+echo "##########################################################"
+cd /opt/metasploit
+gem install bundler
+gem install nokogiri
+bundle install
+./msfupdate
+wget http://www.fastandeasyhacking.com/download/armitage041013.tgz
+tar xvzf armitage041013.tgz
+mv armitage armitage-dist
+mv armitage-dist/* .
+rmdir armitage-dist
+rm armitage041013.tgz
+cd /opt/metasploit/external
+cd pcaprub
+ruby extconf.rb
+make
+make install
+cd ..
+cd ruby-kissfft
+gem build ./kissfft.gemspec
+gem install ./kissfft-0.0.1.gem
+cd ..
+cd ruby-lorcon
+ruby extconf.rb
+make
+make install
+cd ..
+cd ruby-lorcon2
+ruby extconf.rb
+make
+make install
+cd ..
+cd serialport
+ruby extconf.rb
+make
+make install
+cd ..
+echo "##########################################################"
+echo "External tools build complete!"
+echo "##########################################################"
+
+
+
