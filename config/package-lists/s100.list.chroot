@@ -14,6 +14,8 @@ w3af
 nikto
 hydra
 
+#need git
+git
 #office stuff
 gnumeric
 abiword
