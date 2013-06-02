@@ -77,7 +77,7 @@ LB_INITSYSTEM="sysvinit"
 
 # $LB_FDISK: set fdisk program
 # (Default: autodetected)
-LB_FDISK="fdisk.distrib"
+LB_FDISK="fdisk"
 
 # $LB_LOSETUP: set losetup program
 # (Default: autodetected)

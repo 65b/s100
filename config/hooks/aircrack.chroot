@@ -10,6 +10,7 @@ sed -ie 's/-Werror //g' common.mak
 sed -ie 's/-O3 /-Os/g' common.mak
 make
 make install
+airodump-ng-oui-update
 cd /opt
 rm -rf aircrack-ng-1.1.tar.gz
 rm -rf aircrack-ng-1.1

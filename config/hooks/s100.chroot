@@ -44,3 +44,7 @@ sed -ie 's/gimp.desktop;gimp.desktop;evince.desktop;//g'
 #hacks for tor
 TORPID=`cat /etc/passwd | fgrep debian-tor | gawk -F: '{ print $3 }'`
 sed -ie "s/#TORPID#/$TORPID/g" /usr/local/sbin/anonymize
+
+#for arp-scan
+get-oui
+get-iab

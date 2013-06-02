@@ -50,8 +50,8 @@
     <property name="snap_to_border" type="bool" value="true"/>
     <property name="snap_to_windows" type="bool" value="false"/>
     <property name="snap_width" type="int" value="10"/>
-    <property name="theme" type="string" value="Tyrex"/>
-    <property name="title_alignment" type="string" value="left"/>
+    <property name="theme" type="string" value="Totem"/>
+    <property name="title_alignment" type="string" value="center"/>
     <property name="title_font" type="string" value="DejaVu Sans Semi-Condensed 9"/>
     <property name="title_horizontal_offset" type="int" value="0"/>
     <property name="title_shadow_active" type="string" value="false"/>
@@ -78,5 +78,6 @@
     <property name="double_click_time" type="int" value="250"/>
     <property name="double_click_distance" type="int" value="5"/>
     <property name="mousewheel_rollup" type="bool" value="true"/>
+    <property name="tile_on_move" type="bool" value="true"/>
   </property>
 </channel>

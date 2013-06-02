@@ -13,6 +13,7 @@ cd metasploit
 echo "##########################################################"
 echo "Installing dependencies and setting DB password..."
 echo "##########################################################"
+gem update
 gem install msgpack
 
 # Setup postgres for armitage

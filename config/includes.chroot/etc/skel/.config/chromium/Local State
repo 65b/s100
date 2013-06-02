@@ -13,6 +13,9 @@
       "promo_locale": "en-US",
       "promo_version": 7
    },
+   "policy": {
+      "last_statistics_update": "13014590393899639"
+   },
    "profile": {
       "info_cache": {
          "Default": {
@@ -32,10 +35,11 @@
    },
    "uninstall_metrics": {
       "installation_date2": "1343442094",
-      "launch_count": "1"
+      "launch_count": "2"
    },
    "user_experience_metrics": {
-      "session_id": 0,
+      "low_entropy_source": 7583,
+      "session_id": 1,
       "stability": {
          "breakpad_registration_fail": 1,
          "breakpad_registration_ok": 0,
@@ -44,15 +48,15 @@
          "debugger_present": 0,
          "exited_cleanly": true,
          "incomplete_session_end_count": 0,
-         "last_timestamp_sec": "1343442266",
+         "last_timestamp_sec": "1370116910",
          "launch_count": 1,
-         "launch_time_sec": "1343442095",
+         "launch_time_sec": "1370116792",
          "page_load_count": 0,
          "renderer_crash_count": 0,
          "renderer_hang_count": 0,
          "session_end_completed": true,
-         "stats_buildtime": "1342237085",
-         "stats_version": "20.0.1132.57-devel"
+         "stats_buildtime": "1369591208",
+         "stats_version": "27.0.1453.93-devel"
       }
    },
    "was": {

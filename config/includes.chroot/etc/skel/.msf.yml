@@ -2,7 +2,7 @@ production:
   adapter: "postgresql"
   database: "msf"
   username: "msf"
-  password: "notthepassword"
+  password: "fd26016c3b0c61d08c9a8e63f118423a448e54dbc0988f348e156291777b3fd0"
   port: 5432
   host: "localhost"
   pool: 256
