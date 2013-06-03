@@ -3,102 +3,192 @@
       xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
       xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
 >
-  <bookmark href="file:///opt/backdrops/10.jpg" added="2012-08-23T04:23:28Z" modified="2012-08-23T04:23:28Z" visited="2012-08-23T04:23:28.326394Z">
+  <bookmark href="file:///opt/backdrops/Thunderstorm_-_NOAA.jpg" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/jpeg"/>
         <bookmark:applications>
-          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2012-08-23T04:23:28Z" count="1"/>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///opt/backdrops/08.jpg" added="2012-08-23T04:23:28Z" modified="2012-08-23T04:23:28Z" visited="2012-08-23T04:23:28.326468Z">
+  <bookmark href="file:///opt/backdrops/The_Twelve_Apostles_Victoria_Australia_East.jpg" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/jpeg"/>
         <bookmark:applications>
-          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2012-08-23T04:23:28Z" count="1"/>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///opt/backdrops/09.jpg" added="2012-08-23T04:23:28Z" modified="2012-08-23T04:23:28Z" visited="2012-08-23T04:23:28.326535Z">
+  <bookmark href="file:///opt/backdrops/Snelweg_A7_tijdens_de_avondspits.jpg" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/jpeg"/>
         <bookmark:applications>
-          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2012-08-23T04:23:28Z" count="1"/>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///opt/backdrops/07.jpg" added="2012-08-23T04:23:28Z" modified="2012-08-23T04:23:28Z" visited="2012-08-23T04:23:28.326601Z">
+  <bookmark href="file:///opt/backdrops/Seekiefer_(Pinus_halepensis)_9months-fromtop.jpg" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/jpeg"/>
         <bookmark:applications>
-          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2012-08-23T04:23:28Z" count="1"/>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///opt/backdrops/06.jpg" added="2012-08-23T04:23:28Z" modified="2012-08-23T04:23:28Z" visited="2012-08-23T04:23:28.326668Z">
+  <bookmark href="file:///opt/backdrops/Lightning3.jpg" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/jpeg"/>
         <bookmark:applications>
-          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2012-08-23T04:23:28Z" count="1"/>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///opt/backdrops/05.png" added="2012-08-23T04:23:28Z" modified="2012-08-23T04:23:28Z" visited="2012-08-23T04:23:28.326733Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/png"/>
-        <bookmark:applications>
-          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2012-08-23T04:23:28Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///opt/backdrops/03.jpg" added="2012-08-23T04:23:28Z" modified="2012-08-23T04:23:28Z" visited="2012-08-23T04:23:28.326798Z">
+  <bookmark href="file:///opt/backdrops/Les_12_ap%C3%B4tres_-_Great_Ocean_Road.JPG" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/jpeg"/>
         <bookmark:applications>
-          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2012-08-23T04:23:28Z" count="1"/>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///opt/backdrops/04.jpg" added="2012-08-23T04:23:28Z" modified="2012-08-23T04:23:28Z" visited="2012-08-23T04:23:28.326863Z">
+  <bookmark href="file:///opt/backdrops/Isle_of_Man_seen_from_Fleswick_bay.jpg" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/jpeg"/>
         <bookmark:applications>
-          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2012-08-23T04:23:28Z" count="1"/>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///opt/backdrops/02.jpg" added="2012-08-23T04:23:28Z" modified="2012-08-23T04:23:28Z" visited="2012-08-23T04:23:28.326928Z">
+  <bookmark href="file:///opt/backdrops/Helgoland_Lange_Anna_Nordspitze.jpg" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/jpeg"/>
         <bookmark:applications>
-          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2012-08-23T04:23:28Z" count="1"/>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///opt/backdrops/01.jpg" added="2012-08-23T04:23:28Z" modified="2012-08-23T04:23:28Z" visited="2012-08-23T04:23:28.326992Z">
+  <bookmark href="file:///opt/backdrops/Forest-Creek-Eagleville-PA-USA.jpg" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/jpeg"/>
         <bookmark:applications>
-          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2012-08-23T04:23:28Z" count="1"/>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///opt/backdrops/Driving_on_Route_86_-_Heading_West_(6989357321).jpg" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///opt/backdrops/Colorado_National_Monument_(4939640266).jpg" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///opt/backdrops/Cloud_over_yucatan_mexico_02.jpg" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///opt/backdrops/Cloud_forest_mount_kinabalu.jpg" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///opt/backdrops/Chair_and_a_Tree_(8746191394).jpg" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///opt/backdrops/Centerline_Rumble_Strip.jpg" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///opt/backdrops/CapilanoRiverRegPark-river.jpg" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///opt/backdrops/BNSF_Locomotive_(5177078612).jpg" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///opt/backdrops/Astfeld-025.JPG" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///opt/backdrops/Astfeld-024.JPG" added="2013-06-02T23:49:23Z" modified="2013-06-02T23:49:23Z" visited="2013-06-02T23:49:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="xfdesktop-settings" exec="&apos;xfdesktop-settings %u&apos;" modified="2013-06-02T23:49:23Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>

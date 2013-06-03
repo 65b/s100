@@ -53,6 +53,9 @@
       <property name="include-all-workspaces" type="bool" value="false"/>
       <property name="flat-buttons" type="bool" value="true"/>
       <property name="show-handle" type="bool" value="false"/>
+      <property name="show-labels" type="bool" value="false"/>
+      <property name="show-wireframes" type="bool" value="true"/>
+      <property name="switch-workspace-on-unminimize" type="bool" value="false"/>
     </property>
     <property name="plugin-5" type="string" value="cpugraph"/>
     <property name="plugin-6" type="string" value="clock">
