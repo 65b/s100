@@ -20,13 +20,12 @@ fi
 	echo "## Starting S100 Build...    ##"
 	echo "###############################"
 
-	mv cache cache.bak
-	lb clean
-	mv cache.bak cache
+mv cache cache.bak
+rm -rf ./chroot
+rm -rf ./.build
+lb clean
+mv cache.bak cache
 	lb config --architecture i386 --distribution sid --linux-flavours 686-pae --archive-areas "main contrib non-free" --mirror-binary "http://ftp.debian.org/debian/" --mirror-bootstrap "http://ftp.debian.org/debian/" --iso-application "s100" --iso-preparer "s100" --iso-publisher "s100" --iso-volume "s100"
-	lb build | tee build.log
-else
-	echo 'Cancelled. The only valid response is y.'
-fi
+lb build | tee build.log
 
 exit 0
