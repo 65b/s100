@@ -24,7 +24,7 @@ s100_fixes ()
 	echo -n " s100-fixes"
 	ln -s / /filesystem.squashfs
 	echo "fixes done" >> /opt/s100/debug
-	sed -ie 's/gimp.desktop;gimp.desktop;evince.desktop;//g' /usr/share/applications/mimeinfo.cache
+	sed -ie 's/gimp.desktop;//g' /usr/share/applications/mimeinfo.cache
 	s100_network
 }
 

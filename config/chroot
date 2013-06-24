@@ -33,8 +33,8 @@ LB_LINUX_FLAVOURS="686-pae"
 LB_LINUX_PACKAGES="linux-image"
 
 # $LB_PACKAGE_LISTS: set package list to install
-# (Default: s100)
-LB_PACKAGE_LISTS="s100"
+# (Default: standard)
+LB_PACKAGE_LISTS="standard"
 
 # $LB_SECURITY: enable security updates
 # (Default: false)

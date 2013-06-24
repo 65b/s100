@@ -25,6 +25,7 @@ echo "Preparing PostgreSQL for MSF..."
 echo "##########################################################"
 /etc/init.d/postgresql start
 sudo -u postgres psql < /opt/s100/metasploit.sql
+rm /opt/s100/*.sql
 /etc/init.d/postgresql stop
 echo "##########################################################"
 echo "Adding exteral packages..."
