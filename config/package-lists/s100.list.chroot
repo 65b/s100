@@ -21,7 +21,7 @@ abiword
 #depends for w3af (also a hook)
 python-dev
 python-lxml
-python2.6-dev
+python2.7-dev
 python-setuptools
 
 #fuse for sshfs, ntfs

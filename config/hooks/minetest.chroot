@@ -15,12 +15,11 @@ make install
 cd /opt
 rm -rf minetest
 
-#cd /usr/local/share/minetest/games/minetest_game/mods/
-#git clone https://github.com/PilzAdam/boats.git
-#git clone https://github.com/PilzAdam/carts.git
-#git clone https://github.com/RealBadAngel/technic.git
-##git clone https://github.com/Calinou/calinou_mods.git
-#git clone https://github.com/Jeija/minetest-mod-mesecons.git
-#git clone https://github.com/VanessaE/pipeworks.git
-#git clone https://github.com/sapier/animals_modpack
-#popd
+cd /usr/local/share/minetest/games/minetest_game/mods/
+git clone https://github.com/PilzAdam/boats.git
+git clone https://github.com/PilzAdam/carts.git
+git clone https://github.com/RealBadAngel/technic.git
+git clone https://github.com/Calinou/calinou_mods.git
+git clone https://github.com/Jeija/minetest-mod-mesecons.git
+git clone https://github.com/VanessaE/pipeworks.git
+git clone https://github.com/sapier/animals_modpack
