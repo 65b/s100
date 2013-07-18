@@ -1,0 +1,8 @@
+Package: gnome-session*
+Pin: version *
+Pin-Priority: -1
+
+Package: gnome-shell*
+Pin: version *
+Pin-Priority: -1
+

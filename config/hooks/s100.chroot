@@ -5,6 +5,9 @@ mkdir -p /opt/temp
 # get and install skype
 
 cd /opt/temp
+apt-get -y purge gnome-session*
+apt-get -y purge gnome-shell*
+
 wget -O skype-install.deb http://www.skype.com/go/getskype-linux-deb
 dpkg -i skype-install.deb
 apt-get -f install

@@ -30,6 +30,7 @@ fuse
 #emulation front ends
 qemu
 dosbox
+virtualbox
 
 #nice editor
 ne
