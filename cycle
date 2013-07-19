@@ -5,20 +5,21 @@ if [ -n `which git` ]]
 then
 	apt-get install git
 fi
+if [ -n `which lb` ]
+then
+	apt-get install live-build debootstrap
+fi
 
-	if [ -n `which lb` ]
-	then
-		apt-get install live-build debootstrap
-	fi
-
-	if [ -n `which dialog` ]
-	then
-		apt-get install dialog
-	fi
+if [ -n `which dialog` ]
+then
+	apt-get install dialog
+fi
 	
-	echo "###############################"
-	echo "## Starting S100 Build...    ##"
-	echo "###############################"
+echo "###############################"
+echo "## Starting S100 Build...    ##"
+echo "##                           ##"
+echo "## logging to ./build.log    ##"
+echo "###############################"
 
 mv cache cache.bak
 rm -rf ./chroot
