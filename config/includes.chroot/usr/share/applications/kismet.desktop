@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Kismet
 Comment=Kismet
-Exec=kismet
+Exec=sudo sh -c 'kismet'
 Terminal=true
 Type=Application
 Encoding=UTF-8
