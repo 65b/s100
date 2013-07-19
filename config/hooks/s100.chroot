@@ -47,5 +47,7 @@ TORPID=`cat /etc/passwd | fgrep debian-tor | gawk -F: '{ print $3 }'`
 sed -ie "s/#TORPID#/$TORPID/g" /usr/local/sbin/anonymize
 
 #for arp-scan
+mkdir -p /usr/local/share/arp-scan
+cd /usr/local/share/arp-scan
 get-oui
 get-iab
