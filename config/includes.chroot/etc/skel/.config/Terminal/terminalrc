@@ -12,9 +12,11 @@ MiscToolbarsDefault=FALSE
 MiscConfirmClose=TRUE
 MiscCycleTabs=TRUE
 MiscTabCloseButtons=TRUE
-MiscTabCloseMiddleClick=TRUE
+MiscTabCloseMiddleClick=FALSE
 MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
+ShortcutsNoMenukey=TRUE
+ShortcutsNoMnemonics=TRUE
 TitleMode=TERMINAL_TITLE_REPLACE
 ScrollingLines=8192
 FontName=Terminus 9
@@ -30,4 +32,5 @@ ColorSelectionUseDefault=FALSE
 ColorSelection=#0000ffff01fc
 TabActivityColor=#0ad4ec200123
 Term=xterm-color
+
 
