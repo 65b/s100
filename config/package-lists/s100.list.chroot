@@ -78,7 +78,7 @@ gnome-themes-standard
 xterm
 jamin
 jack-rack
-chromium-browser
+chromium
 pan
 abiword
 evince
@@ -86,7 +86,7 @@ filelight
 pidgin
 subversion
 transmission
-irb rdoc libyaml-ruby libzlib-ruby libopenssl-ruby libdl-ruby libreadline-ruby libiconv-ruby rubygems sqlite3 libsqlite3-ruby libsqlite3-dev ruby-dev
+irb rdoc libyaml-ruby libzlib-ruby libopenssl-ruby libdl-ruby libreadline-ruby libiconv-ruby rubygems sqlite3 ruby-sqlite3 libsqlite3-dev ruby-dev
 ruby
 libruby
 irb
@@ -103,7 +103,6 @@ libreadline-ruby
 libiconv-ruby
 rubygems
 sqlite3
-libsqlite3-ruby
 libsqlite3-dev
 xfce4
 xfonts-terminus
@@ -221,7 +220,7 @@ ifenslave-2.6
 ifrename
 ethtool
 ipcalc
-mii-diag
+#mii-diag
 minicom
 gkermit
 netcat
