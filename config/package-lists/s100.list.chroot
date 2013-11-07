@@ -1,6 +1,8 @@
 #musical
 hydrogen
 ardour
+#naev
+libsdl-mixer1.2
 #postgres for armitage
 libxslt-dev
 libxml2-dev
