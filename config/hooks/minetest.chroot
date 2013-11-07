@@ -3,23 +3,30 @@
 # Download and install minetest from git
 mkdir -p /opt
 cd /opt
-git clone https://github.com/celeron55/minetest.git
+git clone https://github.com/minetest/minetest.git
 cd minetest/games
 git clone https://github.com/minetest/common.git
-git clone https://github.com/celeron55/minetest_game.git
+git clone https://github.com/minetest/minetest_game.git
+git clone https://github.com/minetest/survival.git
+git clone https://github.com/minetest/build.git
 mkdir -p /opt/minetest/build
 cd /opt/minetest/build
 cmake .. -DRUN_IN_PLACE=0
 make -j4
 make install
-cd /opt
-rm -rf minetest
-
-cd /usr/local/share/minetest/games/minetest_game/mods/
+#cd /usr/local/share/minetest/games/minetest_game/mods/
 git clone https://github.com/PilzAdam/boats.git
 git clone https://github.com/PilzAdam/carts.git
 #git clone https://github.com/RealBadAngel/technic.git
-git clone https://github.com/Calinou/calinou_mods.git
-git clone https://github.com/Jeija/minetest-mod-mesecons.git
+#git clone https://github.com/Calinou/calinou_mods.git
+#git clone https://github.com/Jeija/minetest-mod-mesecons.git
 #git clone https://github.com/VanessaE/pipeworks.git
-#git clone https://github.com/sapier/animals_modpack
+git clone https://github.com/sapier/animals_modpack
+
+
+
+
+
+
+
+
