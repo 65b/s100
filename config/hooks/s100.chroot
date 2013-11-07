@@ -41,6 +41,9 @@ echo "STARTUP=\"\$CK_LAUNCH_SESSION \$STARTUP\"" >> /etc/X11/Xsession.d/90consol
 rm -rf /usr/share/xfce4/backdrops
 ln -s /opt/backdrops /usr/share/xfce4/backdrops
 
+#hacks for chromium
+ln -s /usr/lib/chromium/chromium-sandbox /usr/lib/chromium/chrome-sandbox
+
 
 #hacks for tor
 TORPID=`cat /etc/passwd | fgrep debian-tor | gawk -F: '{ print $3 }'`
