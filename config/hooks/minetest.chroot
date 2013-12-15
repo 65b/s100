@@ -14,10 +14,19 @@ cd /opt/minetest/build
 cmake .. -DRUN_IN_PLACE=0
 make -j4
 make install
-#cd /usr/local/share/minetest/games/minetest_game/mods/
+cd /usr/local/share/minetest/games
+git clone https://github.com/minetest/common.git
+git clone https://github.com/minetest/minetest_game.git
+git clone https://github.com/minetest/survival.git
+git clone https://github.com/minetest/build.git
+cd /usr/local/share/minetest/games/minetest_game/mods/
 git clone https://github.com/PilzAdam/boats.git
 git clone https://github.com/PilzAdam/carts.git
-#git clone https://github.com/RealBadAngel/technic.git
+git clone https://github.com/Calinou/moreores.git
+git clone https://github.com/Calinou/moreblocks.git
+git clone https://github.com/VanessaE/pipeworks.git
+git clone https://github.com/Jeija/minetest-mod-mesecons.git
+git clone https://github.com/minetest-technic/technic.git
 #git clone https://github.com/Calinou/calinou_mods.git
 #git clone https://github.com/Jeija/minetest-mod-mesecons.git
 #git clone https://github.com/VanessaE/pipeworks.git
