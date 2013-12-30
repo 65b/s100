@@ -196,7 +196,6 @@ manpages
 mbr
 mc
 mcelog
-medusa
 mesa-utils
 mg
 minicom
@@ -224,6 +223,10 @@ netpipe-tcp
 netselect
 net-tools
 network-manager-gnome
+network-manager-openvpn
+network-manager-pptp
+network-manager-strongswan
+network-manager-vpnc
 nfs-common
 ngrep
 nikto
