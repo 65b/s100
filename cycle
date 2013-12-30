@@ -1,18 +1,19 @@
 #!/bin/sh
 
 read -p "This script may need to install packages from the main debian repos to build S100. No repos will be added. Packages are git, live-build, dialog, debootstrap and their dependencies. Press Ctrl-C to terminate, press enter to continue." REPLY
-if [ -n `which git` ]]
-then
+if [ -n `which git` ]]; then
 	apt-get install git
 fi
-if [ -n `which lb` ]
-then
+if [ -n `which lb` ]; then
 	apt-get install live-build debootstrap
 fi
 
-if [ -n `which dialog` ]
-then
+if [ -n `which dialog` ];then
 	apt-get install dialog
+fi
+
+if [ $UID -ne 0 ]; then
+        echo "Please run this as root. We need to chroot."
 fi
 	
 echo "###############################"
@@ -20,6 +21,8 @@ echo "## Starting S100 Build...    ##"
 echo "##                           ##"
 echo "## logging to ./build.log    ##"
 echo "###############################"
+echo "Setting open files limits higher..."
+ulimit -n65535
 
 mv cache cache.bak
 rm -rf ./chroot
