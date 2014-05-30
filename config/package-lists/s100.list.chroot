@@ -171,6 +171,7 @@ libruby
 libsdl-mixer1.2
 libsqlite3-dev
 libssl-dev
+libtool
 libvorbis-dev
 libX11-dev
 libxml2-dev
