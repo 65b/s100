@@ -1,35 +1,59 @@
 #!/bin/sh
 
-read -p "This script may need to install packages from the main debian repos to build S100. No repos will be added. Packages are git, live-build, dialog, debootstrap and their dependencies. Press Ctrl-C to terminate, press enter to continue." REPLY
-if [ -n `which git` ]]; then
-	apt-get install git
-fi
-if [ -n `which lb` ]; then
-	apt-get install live-build debootstrap
+if [ -z "$NO_COLOR"]; then
+readonly RED="\033[1;31m"
+readonly GREEN="\033[1;32m"
+readonly BLUE="\033[1;34m"
+readonly YELLOW="\033[1;33m"
+readonly DRED="\033[0;31m"
+readonly DGREEN="\033[0;32m"
+readonly DBLUE="\033[0;34m"
+readonly DYELLOW="\033[0;33m"
+readonly RESET="\033[0m"
 fi
 
-if [ -n `which dialog` ];then
-	apt-get install dialog
+if [ -n `which git` ] || [ -n `which lb` ] ||  [ -n `which dialog` ]; then
+        echo -e "$REDPlease install git, lb, dialog, and any other build dependencies!$RESET"
+	exit 1
 fi
 
 if [ $UID -ne 0 ]; then
-        echo "Please run this as root. We need to chroot."
+               echo -e  "$REDPlease run this as root. We need to chroot.$RESET"
 fi
 	
-echo "###############################"
-echo "## Starting S100 Build...    ##"
-echo "##                           ##"
-echo "## logging to ./build.log    ##"
-echo "###############################"
-echo "Setting open files limits higher..."
+echo -e"$DRED   ############   ####     ###########   ###########        "          
+echo -e "$RED  #...........#@ #...#@   #..........#@ #..........#@        "         
+echo -e "$GREEN  #\"\"##########@ #\"\"\"#@   #\"\"######\"\"#@ #\"\"######\"\"#@       "          
+echo -e "$DGREEN  #\"\"#@@@@@@@@@@ #;;;#@   #;;#    #;;#@ #;;#    #;;#@       "          
+echo -e "$YELLOW  #;;#@          #;;;#@   #;;#    #;;#@ #;;#    #;;#@        "         
+echo -e "$DYELLOW  #;;#@          #;;;#@   #;;#    #;;#@ #;;#    #;;#@        "         
+echo -e "$DRED  #;;##########  #;;;#@   #;;#    #;;#@ #;;#    #;;#@            "     
+echo -e "$RED  #==========#@  #===#@   #==#    #==#@ #==#    #==#@              "    
+echo -e "$BLUE          #==#@  #===#@   #==#    #==#@ #==#    #==#@              "   
+echo -e "$DYELLOW          #==#@  #===#@   #==#    #==#@ #==#    #==#@            "     
+echo -e "$YELLOW          #==#@  #%%%#@   #==#    #==#@ #==#    #==#@              "   
+echo -e "$GREEN  #########==#@  #%%%#@   #%%#    #%%#@ #%%#    #%%#@                " 
+echo -e "$DGREEN  #%%%%%%%%%%#@  #%%%#@   #%%#    #%%#@ #%%#    #%%#@                " 
+echo -e "$DBLUE  #&&&&&&&&&&#@  #&&&#@   #&&#    #&&#@ #&&#    #&&#@                 "
+echo -e "$DYELLOW  #XXXXXXXXXX#@  #XXX#@   #XXXXXXXXXX#@ #XXXXXXXXXX#@                " 
+echo -e "$DRED  ############@  #####@   ############@ ############@                 "
+echo -e "$RED   @@@@@@@@@@@@   @@@@@    @@@@@@@@@@@@  @@@@@@@@@@@@      $RESET"
+
+echo "$DGREENSetting open files limits higher...$RESET"
 ulimit -n 65535
 
-mv cache cache.bak
+rm -rf ./cache
 rm -rf ./chroot
 rm -rf ./.build
 echo '' > build.log
+
+if [ -d config ]; then
+    cd config
+    rmdir *
+    rm *
+    cd ..
+fi
+
 lb clean
-mv cache.bak cache
 lb config --architecture amd64 --distribution sid --archive-areas "main contrib non-free" --mirror-binary "http://ftp.debian.org/debian/" --mirror-bootstrap "http://ftp.debian.org/debian/" --iso-application "s100" --iso-preparer "s100" --iso-publisher "s100" --iso-volume "s100"
 lb build | tee build.log
-
