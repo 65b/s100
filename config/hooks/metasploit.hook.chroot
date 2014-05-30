@@ -38,22 +38,13 @@ gem install bundler
 gem install nokogiri
 bundle install
 ./msfupdate
-wget http://www.fastandeasyhacking.com/download/armitage041013.tgz
-tar xvzf armitage041013.tgz
+wget http://www.fastandeasyhacking.com/download/armitage140515.tgz
+tar xvzf armitage*.tgz
 mv armitage armitage-dist
 mv armitage-dist/* .
 rmdir armitage-dist
 rm armitage041013.tgz
 cd /opt/metasploit/external
-cd pcaprub
-ruby extconf.rb
-make
-make install
-cd ..
-cd ruby-kissfft
-gem build ./kissfft.gemspec
-gem install ./kissfft-0.0.1.gem
-cd ..
 cd ruby-lorcon
 ruby extconf.rb
 make
