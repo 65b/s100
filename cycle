@@ -12,11 +12,6 @@ readonly DYELLOW="\033[0;33m"
 readonly RESET="\033[0m"
 fi
 
-if [ -n `which git` ] || [ -n `which lb` ] ||  [ -n `which dialog` ]; then
-        echo -e "$REDPlease install git, lb, dialog, and any other build dependencies!$RESET"
-	exit 1
-fi
-
 if [ $UID -ne 0 ]; then
                echo -e  "$REDPlease run this as root. We need to chroot.$RESET"
 fi
