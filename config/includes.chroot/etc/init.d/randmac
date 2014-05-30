@@ -1,14 +1,25 @@
 #!/bin/bash
+#
+# randomize network MAC addresses
 
-NICS=$(/sbin/ifconfig -a | /usr/bin/awk '/Link encap:Ethernet/{print $1}
-')
+### BEGIN INIT INFO
+# Provides:          randmac
+# Required-Start:    $local_fs
+# Required-Stop:     $local_fs
+# Default-Start:     S 2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: MAC Randomization
+# Description:       This init script randomizes the MAC address of all the NICs it can
+### END INIT INFO
 
- for NIC in ${NICS}
-        do
-                ifconfig ${NIC} down
-                /usr/bin/macchanger -r ${NIC} 
-                /bin/sleep 1
-        done
+NICS=$(/sbin/ifconfig -a | /usr/bin/awk '/Link encap:Ethernet/{print $1}')
+
+for NIC in ${NICS}; do
+	MAC=`xxd -l 6 -p /dev/urandom | sed -e "s/.\{2\}/&\:/g" | head -c 17`
+        ifconfig ${NIC} down
+        /usr/bin/macchanger -m ${MAC} ${NIC} 
+        /bin/sleep 1
+done
 
 # Carry out specific functions when asked to by the system
 case "$1" in

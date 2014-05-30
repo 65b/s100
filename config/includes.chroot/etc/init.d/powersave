@@ -1,0 +1,116 @@
+#!/bin/bash
+#
+# power saving
+
+### BEGIN INIT INFO
+# Provides:          powersave
+# Required-Start:    $local_fs
+# Required-Stop:     $local_fs
+# Default-Start:     S 2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Power saving
+# Description:       This init script sets up power saving
+### END INIT INFO
+
+	# min max mov
+
+	MIN_BACKLIGHT_PERCENT=75
+	MAX_BACKLIGHT_PERCENT=100
+
+        # Audio powersave
+        echo '1' > '/sys/module/snd_hda_intel/parameters/power_save' 
+
+        # No NMI watchdog
+        echo '0' > '/proc/sys/kernel/nmi_watchdog'
+
+        # No wake on lan, fuckers
+        ethtool -s eth0 wol d
+
+        # setup tp_smapi
+        modprobe tp_smapi
+        modprobe hdaps
+        echo 40 > /sys/devices/platform/smapi/BAT0/start_charge_thresh
+        echo 85 > /sys/devices/platform/smapi/BAT0/stop_charge_thresh
+	
+        new_powersave_state=min
+
+	# change powersave states
+	case $powersave_state in
+		min)
+			target_cpu_governor=powersave
+			target_brute_force=auto
+			target_wlan_power_save=on
+                        target_sata=min_power
+			dpms_seconds=60
+			backlight_percent=50
+			Log "POWER MODE: MIN (full powersave)"
+		;;
+		max)
+			target_cpu_governor=ondemand
+			target_brute_force=auto
+			target_wlan_power_save=off
+                        target_sata=min_power
+			dpms_seconds=600
+			backlight_percent=75
+			Log "POWER MODE: BALANCED"
+		;;
+	esac
+
+	# CPU
+	#for cpupath in /sys/devices/systems/cpu/cpu?; do echo -n $target_cpu_governor >"$cpupath/cpufreq/scaling_governor"; done
+	for cpu in 0 1 2 3; do cpufreq-set -c $cpu -g $target_cpu_governor; \
+	Log "POWERSAVE-$powersave_state cpu $cpu set to $target_cpu_governor"; done
+
+	# BRUTE FORCE SYS TREE
+	for _control in /sys/bus/{pci,spi,i2c}/devices/*/power/control; do echo $target_brute_force > $_control && Log "POWERSAVE SET: $_control"|| true; done
+	for _control in /sys/bus/usb/devices/*/power/control; do echo $target_brute_force > $_control && Log "POWERSAVE SET: $_control"|| true; done
+        for _control in /sys/class/scsi_host/*/link_power_management_policy; do echo $target_sata > $_control && Log "POWERSAVE SET: $_control"|| true; done
+
+
+	# NETWORK
+	iw wlan0 set power_save $target_wlan_power_save && Log "POWERSAVE-$powersave_state wifi adapter powersave $target_wlan_power_save"
+
+	# DISPLAY
+	# graphics powersave taken care of in brute force above
+	
+	# DPMS
+	xset dpms 0 0 $dpms_seconds 2>/dev/null && Log "POWERSAVE-$powersave_state DPMS timeout set to $dpms_seconds"
+
+	# read current/max brightness values
+	sys_current_brightness=$(cat /sys/class/backlight/acpi_video0/actual_brightness)
+	sys_full_brightness=$(cat /sys/class/backlight/acpi_video0/max_brightness)
+
+	# set target
+	target_brightness=$((($backlight_percent*$sys_full_brightness)/100))
+
+	if [[ $sys_current_brightness > $target_brightness ]]
+	then
+		# reduce
+		Log "REDUCE BACKLIGHT from $sys_current_brightness to $target_brightness"
+		for (( b=$sys_current_brightness; b>=$target_brightness; b--)); do echo -n $b > /sys/class/backlight/acpi_video0/brightness; sleep 0.015; done
+	else
+		# increase
+		Log "INCREASE BACKLIGHT from $sys_current_brightness to $target_brightness"
+		for (( b=$sys_current_brightness; b<=$target_brightness; b++)); do echo -n $b > /sys/class/backlight/acpi_video0/brightness; sleep 0.015; done
+	fi
+
+	# save state
+	echo -n $powersave_state > $powersave_state_file
+
+
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    echo "Starting power saving "
+    ;;
+  stop)
+    echo "Stopping power saving "
+    ;;
+  *)
+    echo "Usage: /etc/init.d/powersave {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0

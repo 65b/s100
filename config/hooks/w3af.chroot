@@ -1,4 +1,0 @@
-#!/bin/sh
-
-sh -c 'easy_install pybloomfiltermmap'
-

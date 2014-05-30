@@ -1,3 +1,5 @@
+auto
+local
 config/source
 config/common
 config/bootstrap

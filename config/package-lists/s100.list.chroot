@@ -13,6 +13,7 @@ atm-tools
 atsar
 audacious
 audacity
+autoconf
 autopsy
 aview
 b43-fwcutter
@@ -44,6 +45,7 @@ cpuburn
 cpuid
 crashme
 cryptcat
+cryptsetup
 curl
 cutter
 dar
@@ -51,8 +53,8 @@ dash
 dbench
 dc
 debootstrap
+default-jre
 desktop-base
-dhcp3-client
 directvnc
 discover
 disktype
@@ -84,7 +86,7 @@ firmware-bnx2
 firmware-iwlwifi
 firmware-qlogic
 firmware-ralink
-flashplugin-nonfree
+#flashplugin-nonfree
 foremost
 fping
 fsarchiver
@@ -106,11 +108,11 @@ gnat
 gnome-themes-standard
 gnumeric
 gnupg
+golang
 gparted
 gpm
 grub
 gsynaptics
-hal
 hddtemp
 hdparm
 hexedit
@@ -131,7 +133,7 @@ icmpush
 ifenslave-2.6
 ifrename
 iftop
-ipcalc
+#vvipcalc
 ipgrab
 iproute
 iproute-doc
@@ -142,7 +144,7 @@ iputils-tracepath
 irb
 irssi
 iw
-jack-rack
+#jack-rack
 jamin
 jfsutils
 lame
@@ -150,21 +152,21 @@ less
 lft
 lftp
 libbz2-dev
-libdl-ruby
+#libdl-ruby
 libertas-firmware
 libgl1-mesa-dev
-libiconv-ruby
+#libiconv-ruby
 libirrlicht-dev
 libjpeg-dev
 libncurses-dev
 libnl-dev
 libopenal-dev
-libopenssl-ruby
+#libopenssl-ruby
 libpcap-dev
 libpgsql-ruby
 libpng-dev
 libpq-dev
-libreadline-ruby
+#libreadline-ruby
 libruby
 libsdl-mixer1.2
 libsqlite3-dev
@@ -174,8 +176,8 @@ libX11-dev
 libxml2-dev
 libxslt-dev
 libxxf86vm-dev
-libyaml-ruby
-libzlib-ruby
+#libyaml-ruby
+#libzlib-ruby
 lilo
 links2
 linphone
@@ -224,7 +226,6 @@ netselect
 net-tools
 network-manager-gnome
 network-manager-openvpn
-network-manager-pptp
 network-manager-strongswan
 network-manager-vpnc
 nfs-common
@@ -253,6 +254,7 @@ parted
 partimage
 pax
 pciutils
+pepperflashplugin-nonfree
 pidgin
 pkg-config
 playonlinux
@@ -270,6 +272,7 @@ psmisc
 pstack
 pv
 pwgen
+python-pybloomfiltermmap
 python2.7-dev
 python-dev
 python-lxml
@@ -293,7 +296,7 @@ rsnapshot
 rsync
 ruby
 ruby-dev
-rubygems
+#rubygems
 ruby-sqlite3
 saidar
 scalpel
@@ -302,6 +305,7 @@ screen
 scsitools
 sdparm
 secure-delete
+sharutils
 sipcalc
 sleuthkit
 smartmontools
@@ -376,3 +380,4 @@ xserver-xorg-video-nouveau
 xterm
 zd1211-firmware
 zip
+zmap

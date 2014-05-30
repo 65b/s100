@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 ## live-config(7) - System Configuration Scripts
 ## Copyright (C) 2006-2012 Daniel Baumann <daniel@debian.org>
 ##
@@ -21,40 +22,23 @@ s100 ()
 
 s100_fixes ()
 {
-	echo -n " s100-fixes"
+	echo -n "s100-fixes"
 	ln -s / /filesystem.squashfs
-	echo "fixes done" >> /opt/s100/debug
 	sed -ie 's/gimp.desktop;//g' /usr/share/applications/mimeinfo.cache
-	s100_network
-}
-
-s100_network ()
-{
-	echo -n " s100-network"
-	for NIC in ${NICS}
-	do
-		ifconfig ${NIC} down
-        	/usr/bin/macchanger -r ${NIC} 
-        	/bin/sleep 1
-	done
-
-	echo "VisualHostKey yes" >> /etc/ssh/ssh_config
-
-	echo "network done" >> /opt/s100/debug
-
+	echo "fixes done" >> /opt/s100/debug
 	s100_firewall
 }
 
 s100_firewall ()
 {
-	echo -n " s100-fw"
+	echo -n "s100-fw"
+	echo "firewall start" >> /opt/s100/debug
 	iptables -P FORWARD DROP
 	iptables -P INPUT DROP
 	iptables -P OUTPUT ACCEPT
 	iptables -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 	iptables -A INPUT -i lo -j ACCEPT
 	iptables -A INPUT -m conntrack --ctstate INVALID -j DROP
-	
 	echo "firewall done" >> /opt/s100/debug
 
 	s100_sound

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Download and install kismet
+mkdir -p /opt
+cd /opt
+wget http://www.kismetwireless.net/code/kismet-2013-03-R1b.tar.xz
+tar xJvf kismet-2013-03-R1b.tar.xz
+
+cd kismet*
+
+./configure
+make dep
+make -j2
+make install
+
+cd ..
+rm -rf kismet*
+
+

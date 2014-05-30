@@ -22,14 +22,14 @@ echo "##                           ##"
 echo "## logging to ./build.log    ##"
 echo "###############################"
 echo "Setting open files limits higher..."
-ulimit -n65535
+ulimit -n 65535
 
 mv cache cache.bak
 rm -rf ./chroot
 rm -rf ./.build
+echo '' > build.log
 lb clean
 mv cache.bak cache
-	lb config --architecture i386 --distribution sid --linux-flavours 686-pae --archive-areas "main contrib non-free" --mirror-binary "http://ftp.debian.org/debian/" --mirror-bootstrap "http://ftp.debian.org/debian/" --iso-application "s100" --iso-preparer "s100" --iso-publisher "s100" --iso-volume "s100"
+lb config --architecture amd64 --distribution sid --archive-areas "main contrib non-free" --mirror-binary "http://ftp.debian.org/debian/" --mirror-bootstrap "http://ftp.debian.org/debian/" --iso-application "s100" --iso-preparer "s100" --iso-publisher "s100" --iso-volume "s100"
 lb build | tee build.log
 
-exit 0
