@@ -38,6 +38,9 @@ echo "$DGREENSetting open files limits higher...$RESET"
 ulimit -n 65535
 
 rm -rf ./cache
+umount -l ./chroot/dev
+umount -l ./chroot/dev/pts
+umount -l ./chroot/*
 rm -rf ./chroot
 rm -rf ./.build
 echo '' > build.log
