@@ -1,18 +1,10 @@
 #!/bin/sh
 
 mkdir -p /opt/temp
-
-# get and install skype
-
-cd /opt/temp
+# force no gnome shell
 apt-get -y purge gnome-session*
 apt-get -y purge gnome-shell*
 
-wget -O skype-install.deb http://www.skype.com/go/getskype-linux-deb
-dpkg -i skype-install.deb
-apt-get -f install
-cd /
-rm -rf /opt/temp
 
 # get and install baudline
 cd /opt
@@ -48,8 +40,7 @@ rm -rf /usr/share/xfce4/backdrops
 ln -s /opt/backdrops /usr/share/xfce4/backdrops
 
 #hacks for chromium
-ln -s /usr/lib/chromium/chromium-sandbox /usr/lib/chromium/chrome-sandbox
-
+#ln -s /usr/lib/chromium/chromium-sandbox /usr/lib/chromium/chrome-sandbox
 
 #hacks for tor
 TORPID=`cat /etc/passwd | fgrep debian-tor | gawk -F: '{ print $3 }'`
