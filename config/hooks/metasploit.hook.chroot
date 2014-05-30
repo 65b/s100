@@ -44,22 +44,7 @@ mv armitage armitage-dist
 mv armitage-dist/* .
 rmdir armitage-dist
 rm armitage041013.tgz
-cd /opt/metasploit/external
-cd ruby-lorcon
-ruby extconf.rb
-make
-make install
-cd ..
-cd ruby-lorcon2
-ruby extconf.rb
-make
-make install
-cd ..
-cd serialport
-ruby extconf.rb
-make
-make install
-cd ..
+
 echo "##########################################################"
 echo "External tools build complete!"
 echo "##########################################################"
