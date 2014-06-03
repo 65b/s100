@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=NAEV
-Comment=NAEV EV-clone
-Exec=/usr/local/bin/naev
-Terminal=false
-Type=Application
-Encoding=UTF-8
-Icon=xterm-color_48x48
-Categories=Game;Games;Entertainment;

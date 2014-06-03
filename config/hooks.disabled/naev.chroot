@@ -1,9 +1,0 @@
-#!/bin/sh
-mkdir -p /opt/naev
-cd /opt/naev
-wget -O naev.bin 'http://sourceforge.net/projects/naev/files/naev-0.5.3/naev-0.5.3-linux-x86-32/download'
-wget -O ndata 'http://sourceforge.net/projects/naev/files/naev-0.5.3/ndata-0.5.3/download'
-echo '#!/bin/sh' > naev
-echo '/opt/naev/naev.bin /opt/naev/ndata' >> naev
-chmod +x naev*
-mv naev /usr/local/bin/

@@ -144,7 +144,6 @@ iputils-tracepath
 irb
 irssi
 iw
-#jack-rack
 jamin
 jfsutils
 lame
@@ -152,21 +151,17 @@ less
 lft
 lftp
 libbz2-dev
-#libdl-ruby
 libertas-firmware
 libgl1-mesa-dev
-#libiconv-ruby
 libirrlicht-dev
 libjpeg-dev
 libncurses-dev
 libnl-dev
 libopenal-dev
-#libopenssl-ruby
 libpcap-dev
 libpgsql-ruby
 libpng-dev
 libpq-dev
-#libreadline-ruby
 libruby
 libsdl-mixer1.2
 libsqlite3-dev
@@ -177,8 +172,6 @@ libX11-dev
 libxml2-dev
 libxslt-dev
 libxxf86vm-dev
-#libyaml-ruby
-#libzlib-ruby
 lilo
 links2
 linphone
@@ -241,8 +234,8 @@ ntfs-3g
 ntop
 ntpdate
 nvi
-openjdk-6-jdk
-openjdk-6-jre
+openjdk-7-jdk
+openjdk-7-jre
 openssl
 openvpn
 p0f
@@ -297,7 +290,6 @@ rsnapshot
 rsync
 ruby
 ruby-dev
-#rubygems
 ruby-sqlite3
 saidar
 scalpel
@@ -383,3 +375,4 @@ xterm
 zd1211-firmware
 zip
 zmap
+
