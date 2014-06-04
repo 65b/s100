@@ -11,7 +11,7 @@ git clone https://github.com/minetest/survival.git
 git clone https://github.com/minetest/build.git
 mkdir -p /opt/minetest/build
 cd /opt/minetest/build
-export CFLAGS+=" -fstack-protector-all"
+export CFLAGS=" -fstack-protector-all"
 cmake .. -DRUN_IN_PLACE=0
 make -j4
 make install
