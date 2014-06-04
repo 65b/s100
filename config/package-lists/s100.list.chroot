@@ -318,6 +318,7 @@ symlinks
 sysfsutils
 syslinux
 syslinux-common
+task-xfce4-desktop
 tcpdump
 tcpreen
 tcpreplay
