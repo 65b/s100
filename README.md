@@ -22,8 +22,7 @@ S100 Security/Forensic/Recovery Live CD environment
        @@@@@@@@@@@@   @@@@@    @@@@@@@@@@@@  @@@@@@@@@@@@                 
                                                                           
 
-What is S100?
----------------------------------------------------------
+#What is S100?  
 S100 is a live cd that is mainly aimed at computer users
 who find themselves needing a specific set of tools on
 fairly diverse computer hardware.
@@ -39,8 +38,7 @@ be a usb multitool for any technical task which could
 benefit from a non-persistent, portable environment with
 a wide variety of common and uncommon tools
 
-What is included?
----------------------------------------------------------
+#What is included?  
 abiword  
 acl  
 acpi  
@@ -129,7 +127,6 @@ firmware-bnx2
 firmware-iwlwifi  
 firmware-qlogic  
 firmware-ralink  
-#flashplugin-nonfree  
 foremost  
 fping  
 fsarchiver  
@@ -176,7 +173,6 @@ icmpush
 ifenslave-2.6  
 ifrename  
 iftop  
-#vvipcalc  
 ipgrab  
 iproute  
 iproute-doc  
@@ -419,7 +415,7 @@ zd1211-firmware
 zip  
 zmap  
 
--- from source  
+#From source  
 Metasploit  
 Armitage  
 ZFSonLinux  
@@ -428,14 +424,13 @@ Aircrack-NG
 Ncrack  
 Reaver  
 
---from binary
+#From binary  
 Flash
 Random desktops from wikimedia  
 Some XFCE4 theme  
 
 
-What is the base distribution for S100?
----------------------------------------------------------
+#What is the base distribution for S100?  
 S100 is currently based off of debian-live sid.
 This is mainly because the debian live build tools are
 extremely useful and portable. However, it is a matter of
@@ -447,8 +442,7 @@ scripts and flatfiles that get inserted into the system
 to configure it. Both are conceptually quite portable,
 and so the S100 "environment" can be ported.
 
-How do I use it?
----------------------------------------------------------
+#How do I use it?  
 Using a debian sid system of some kind (Ubuntu may also work)
 install debian live-build. Pull a git clone, cd into the 
 working directory, and type "./cycle"
@@ -464,16 +458,14 @@ up the working directory and start fresh, ideally these
 issues will be resolved by future changes to the cycle
 script.
 
-How can I help?
----------------------------------------------------------
+#How can I help?  
 Send pull requests, I am glad for contributions, it's
 quite hard to keep things like the kismet, armitage, and
 other integrations functional as they and sid are doing
 rapid changes. Testing and filing bug reports for hardware
 or software is also much appreciated!
 
-License
----------------------------------------------------------
+#License
 Where not otherwise superceded or licensed by other parties
 S100 defaults to the original BSD license.
 
