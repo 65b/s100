@@ -40,12 +40,12 @@ ulimit -n 65535
 if ! [ "$1" = "noclean" ] && ! [ -d ./cache ]; then
 rm -rf ./cache
 else
-mv ./cache ./cache.bak
+mv ./cache ./cache.bak &> /dev/null
 fi
 
-umount -l ./chroot/dev
-umount -l ./chroot/dev/pts
-umount -l ./chroot/*
+umount -l ./chroot/dev &> /dev/null
+umount -l ./chroot/dev/pts &> /dev/null
+umount -l ./chroot/* &> /dev/null
 
 rm -rf ./chroot
 rm -rf ./.build
@@ -53,8 +53,8 @@ echo '' > build.log
 
 if [ -d config ]; then
     cd config
-    rmdir *
-    rm *
+    rmdir * &> /dev/null
+    rm * &> /dev/null
     cd ..
 fi
 
