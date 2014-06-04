@@ -37,10 +37,16 @@ echo -e "$RED   @@@@@@@@@@@@   @@@@@    @@@@@@@@@@@@  @@@@@@@@@@@@      $RESET"
 echo "$DGREENSetting open files limits higher...$RESET"
 ulimit -n 65535
 
+if ! [ "$1" = "noclean" ] && ! [ -d ./cache ]; then
 rm -rf ./cache
+else
+mv ./cache ./cache.bak
+fi
+
 umount -l ./chroot/dev
 umount -l ./chroot/dev/pts
 umount -l ./chroot/*
+
 rm -rf ./chroot
 rm -rf ./.build
 echo '' > build.log
@@ -55,4 +61,7 @@ fi
 lb clean
 lb init --distribution sid --project debian
 lb config --architecture amd64 --distribution sid --archive-areas "main contrib non-free" --mirror-binary "http://ftp.debian.org/debian/" --mirror-bootstrap "http://ftp.debian.org/debian/" --iso-application "s100" --iso-preparer "s100" --iso-publisher "s100" --iso-volume "s100"
+if [ "$1" = "noclean" ] && [ -d ./cache.bak ]; then
+	mv ./cache.bak ./cache
+fi
 lb build | tee build.log
