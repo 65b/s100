@@ -288,8 +288,8 @@ rlwrap
 rpm
 rsnapshot
 rsync
-ruby
-ruby-dev
+ruby1.9.1
+ruby1.9.1-dev
 ruby-sqlite3
 saidar
 scalpel
