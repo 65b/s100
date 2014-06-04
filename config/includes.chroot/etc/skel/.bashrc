@@ -97,3 +97,6 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+# Ensure RVM is loaded
+source /usr/local/rvm/scripts/rvm
