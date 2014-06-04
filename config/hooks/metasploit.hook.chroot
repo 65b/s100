@@ -48,7 +48,7 @@ echo "##########################################################"
 cd /opt/metasploit
 gem install bundler
 gem install nokogiri
-bundle install
+bundle install --deployment
 ./msfupdate
 wget http://www.fastandeasyhacking.com/download/armitage-latest.tgz
 tar xvzf armitage*.tgz
