@@ -3,7 +3,6 @@
 # Give ourselves complete power on postgres, it's a livecd
 
 sed -i 's/peer/trust/g' /etc/postgresql/*/main/pg_hba.conf
-
 # Download and install metasploit
 mkdir -p /opt
 cd /opt
@@ -29,7 +28,8 @@ echo "##########################################################"
 echo "Preparing PostgreSQL for MSF..."
 echo "##########################################################"
 /etc/init.d/postgresql start
-sudo -u postgres psql < /opt/s100/metasploit.sql
+sleep 5
+sudo -u postgres psql -U postgres < /opt/s100/metasploit.sql
 rm /opt/s100/*.sql
 /etc/init.d/postgresql stop
 echo "##########################################################"
@@ -45,7 +45,7 @@ tar xvzf armitage*.tgz
 mv armitage armitage-dist
 mv armitage-dist/* .
 rmdir armitage-dist
-rm armitage041013.tgz
+rm armitage*.tgz
 
 echo "##########################################################"
 echo "External tools build complete!"
