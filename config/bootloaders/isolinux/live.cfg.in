@@ -1,16 +1,16 @@
 label live-ram
 	menu label ^S100 Ram Only
 	kernel /live/vmlinuz
-	append initrd=/live/initrd.img boot=live config autologin noeject toram
+	append initrd=/live/initrd.img boot=live live-config autologin noeject toram
 
 label live-nomodeset
 	menu label ^S100 No Modesetting
 	kernel /live/vmlinuz
-	append initrd=/live/initrd.img boot=live config autologin noeject nomodeset
+	append initrd=/live/initrd.img boot=live live-config autologin noeject nomodeset
 	
 label live
 	menu label ^S100
 	menu default
 	kernel /live/vmlinuz
-	append initrd=/live/initrd.img boot=live config autologin noeject
+	append initrd=/live/initrd.img boot=live live-config autologin noeject
 
