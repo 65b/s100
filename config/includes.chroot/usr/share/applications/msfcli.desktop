@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Metasploit CLI
-Comment=Metasploit CLI
-Exec=/opt/metasploit/msfcli
-Terminal=true
-Type=Application
-Encoding=UTF-8
-Icon=xterm-color_48x48
-Categories=Network;Security;
