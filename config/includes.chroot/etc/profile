@@ -35,4 +35,4 @@ if [ -d /etc/profile.d ]; then
   unset i
 fi
 
-source /usr/local/rvm/scripts/rvm
+. /usr/local/rvm/scripts/rvm
