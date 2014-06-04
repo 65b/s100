@@ -1,7 +1,8 @@
 # /etc/profile: system-wide .profile file for the Bourne shell (sh(1))
 # and Bourne compatible shells (bash(1), ksh(1), ash(1), ...).
 
-PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/opt/metasploit"
+
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/usr/local/rvm/bin:/opt/metasploit"
 export PATH
 
 MSF_DATABASE_CONFIG=/home/user/.msf.yml
@@ -34,3 +35,4 @@ if [ -d /etc/profile.d ]; then
   unset i
 fi
 
+source /usr/local/rvm/scripts/rvm
