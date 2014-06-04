@@ -17,10 +17,15 @@ echo "##########################################################"
 
 git clone https://github.com/rapid7/metasploit-framework.git
 mv metasploit-framework metasploit
-cd metasploit
+echo "##########################################################"
+echo "Setting up RVM..."
+echo "##########################################################"
+cat /opt/rvm/rvm.sh | bash -s stable --autolibs=enabled --ruby=1.9.3
+source /usr/local/rvm/scripts/rvm
 echo "##########################################################"
 echo "Installing dependencies and setting DB password..."
 echo "##########################################################"
+cd metasploit
 gem update
 gem install msgpack
 
@@ -45,7 +50,7 @@ gem install bundler
 gem install nokogiri
 bundle install
 ./msfupdate
-wget http://www.fastandeasyhacking.com/download/armitage140515.tgz
+wget http://www.fastandeasyhacking.com/download/armitage-latest.tgz
 tar xvzf armitage*.tgz
 mv armitage armitage-dist
 mv armitage-dist/* .
