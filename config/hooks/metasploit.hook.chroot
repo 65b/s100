@@ -3,6 +3,11 @@
 # Give ourselves complete power on postgres, it's a livecd
 
 sed -i 's/peer/trust/g' /etc/postgresql/*/main/pg_hba.conf
+
+# disable ssl for postgres, don't care, it's local
+
+sed -i "s/^ssl/\#ssl/g" /etc/postgresql/*/main/postgresql.conf
+
 # Download and install metasploit
 mkdir -p /opt
 cd /opt
