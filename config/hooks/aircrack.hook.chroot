@@ -1,5 +1,5 @@
 #!/bin/sh
-
+export CFLAGS+=" -O2 -fstack-protector-all -pipe"
 # Download and install metasploit
 mkdir -p /opt
 cd /opt
