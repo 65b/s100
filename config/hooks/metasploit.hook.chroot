@@ -20,6 +20,7 @@ mv metasploit-framework metasploit
 echo "##########################################################"
 echo "Setting up RVM..."
 echo "##########################################################"
+groupadd -g1010 rvm
 cat /opt/rvm/rvm.sh | bash -s stable --autolibs=enabled --ruby=1.9.3
 source /usr/local/rvm/scripts/rvm
 echo "##########################################################"
