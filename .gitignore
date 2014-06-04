@@ -4,6 +4,7 @@ config/source
 config/common
 config/bootstrap
 config/binary
+.lock
 .build
 .build/*
 cache
