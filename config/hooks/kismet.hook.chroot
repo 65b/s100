@@ -1,5 +1,6 @@
 #!/bin/sh
 
+export CFLAGS+=" -O2 -pipe -fstack-protector-all"
 # Download and install kismet
 mkdir -p /opt
 cd /opt
