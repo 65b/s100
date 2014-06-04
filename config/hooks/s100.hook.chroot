@@ -9,9 +9,9 @@ apt-get -y purge gnome-shell*
 # get and install baudline
 cd /opt
 wget http://baudline.com/baudline_1.08_linux_x86_64.tar.gz
-tar xvzf baudline_1.08*
-mv /opt/baudline_1.08* /opt/baudline
-rm baudline_1.08*.tar.gz
+tar xvzf baudline*.tar.gz
+mv /opt/baudline* /opt/baudline
+rm baudline*.tar.gz
 
 #start random mac hack
 update-rc.d randmac defaults
