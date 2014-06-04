@@ -1,2 +1,2 @@
-CREATE USER msf WITH PASSWORD 'notthepassword';
+CREATE ROLE msf WITH PASSWORD 'notthepassword' LOGIN;
 CREATE DATABASE msf OWNER msf;
