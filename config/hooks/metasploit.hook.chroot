@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Give ourselves complete power on postgres, it's a livecd
+
+sed -i 's/peer/trust/g' /etc/postgresql/*/main/pg_hba.conf
+
 # Download and install metasploit
 mkdir -p /opt
 cd /opt
@@ -18,10 +22,8 @@ gem install msgpack
 
 # Setup postgres for armitage
 pw=`date | sha256sum | head -c 64`
-sed -ie "s/notthepassword/$pw/g" /opt/s100/metasploit.sql
-rm /opt/s100/metasploit.sqle
-sed -ie "s/notthepassword/$pw/g" /etc/skel/.msf.yml
-rm /etc/skel/.msf.ymle
+sed -i "s/notthepassword/$pw/g" /opt/s100/metasploit.sql
+sed -i "s/notthepassword/$pw/g" /etc/skel/.msf.yml
 
 echo "##########################################################"
 echo "Preparing PostgreSQL for MSF..."
