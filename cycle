@@ -1,4 +1,4 @@
-#!/bin/bassh
+#!/bin/bash
 
 if [ -z "$NO_COLOR"]; then
 readonly RED="\033[1;31m"
