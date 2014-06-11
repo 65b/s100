@@ -159,7 +159,6 @@ libncurses-dev
 libnl-dev
 libopenal-dev
 libpcap-dev
-libpgsql-ruby
 libpng-dev
 libpq-dev
 libruby
@@ -290,6 +289,7 @@ rsnapshot
 rsync
 ruby1.9.1
 ruby1.9.1-dev
+ruby-pg
 ruby-sqlite3
 saidar
 scalpel
