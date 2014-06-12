@@ -233,6 +233,7 @@ ntfs-3g
 ntop
 ntpdate
 nvi
+nvidia-driver
 openjdk-7-jdk
 openjdk-7-jre
 openssl
@@ -370,7 +371,6 @@ xserver-xorg-input-evdev
 xserver-xorg-input-synaptics
 xserver-xorg-video-ati
 xserver-xorg-video-intel
-xserver-xorg-video-nouveau
 xterm
 zd1211-firmware
 zip

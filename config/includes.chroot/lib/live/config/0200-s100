@@ -17,6 +17,18 @@ s100 ()
 
 	PATH=/usr/sbin:/usr/bin:/sbin:/bin
 	NICS=$(/sbin/ifconfig -a | /usr/bin/awk '/Link encap:Ethernet/{print $1}')
+	s100_video_nvidia
+}
+
+s100_video_nvidia ()
+{
+	if [ -n "`lspci | fgrep -i VGA | fgrep -i nvidia`" ]; then
+		touch /opt/s100/nvidia_detected
+		mkdir -p /etc/X11/xorg.conf.d
+        	echo -e 'Section "Device"\n\tIdentifier "My GPU"\n\tDriver "nvidia"\nEndSection' > /etc/X11/xorg.conf.d/20-nvidia.conf	
+	else
+		touch /opt/s100/no_nvidia_detected
+	fi
 	s100_fixes
 }
 
