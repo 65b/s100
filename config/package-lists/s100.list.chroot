@@ -127,7 +127,6 @@ httping
 hwinfo
 hydra
 hydrogen
-icedtea6-plugin
 icmpinfo
 icmpush
 ifenslave-2.6
@@ -156,7 +155,7 @@ libgl1-mesa-dev
 libirrlicht-dev
 libjpeg-dev
 libncurses-dev
-libnl-dev
+libnl-3-dev
 libopenal-dev
 libpcap-dev
 libpng-dev
@@ -236,6 +235,7 @@ nvi
 nvidia-driver
 openjdk-7-jdk
 openjdk-7-jre
+icedtea-plugin
 openssl
 openvpn
 p0f
@@ -288,8 +288,8 @@ rlwrap
 rpm
 rsnapshot
 rsync
-ruby1.9.1
-ruby1.9.1-dev
+ruby2.1
+ruby2.1-dev
 ruby-pg
 ruby-sqlite3
 saidar
